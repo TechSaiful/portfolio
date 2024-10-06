@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Saiful | WordPress Expert | Elementor Expert | Front End Developer</title>
+
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind css & daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- fontawesome cdn -->
+    <script src="https://kit.fontawesome.com/800d6f1b24.js" crossorigin="anonymous"></script>
+
+    <!-- bodymovin cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+</head>
+
+<body>
+
+    <main class="bg-slate-950">
+
+        <!-- header section -->
+        <div id="main_header" class="w-full sticky top-0 z-50 bg-slate-950 mx-auto">
+            <div class="navbar bg-transparent w-full md:w-4/5 mx-auto">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            <li><a>Item 1</a></li>
+                            <li><a>Item 3</a></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn btn-ghost text-xl focus:ring">Tech Saiful</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1">
+                        <li><a>Portfolio</a></li>
+                        <li><a>About Me</a></li>
+                        <li><a>Contact Me</a></li>
+                    </ul>
+                </div>
+                <!-- social icons -->
+                <div class="navbar-end flex gap-4">
+                    <a href="#" class="text-2xl hover:text-slate-500" target="_blank"><i
+                            class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-slate-500" target="_blank"><i
+                            class="fa-brands fa-linkedin"></i></a>
+                    <a href="#" class="text-2xl hover:text-slate-500" target="_blank"><i
+                            class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <script>
+            // blur if the page has been scrolled down
+            // let headerBtn = document.getElementById('header_btn_main');
+            // let navHeaderMain = document.getElementById('nav_header_main');
+            let mainHeader = document.getElementById('main_header');
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 5) {
+                    // headerBtn.classList.remove('bg-white');
+                    // navHeaderMain.classList.remove('bg-[#F9F7F3]');
+                    mainHeader.classList.add('backdrop-blur-3xl', 'bg-black/80', 'backdrop-opacity-90');
+                }
+                else{
+                    mainHeader.classList.remove('backdrop-blur-3xl', 'bg-black/80', 'backdrop-opacity-90');
+                }
+            })
+        </script>
+        <!-- header end -->
+
+
+        <!-- hero section -->
+        <div class="hero" style="background-image: url(images/hero\ bg.png);">
+            <div class="hero-overlay bg-gray-950 bg-opacity-95"></div>
+            <div class="hero-content text-neutral-content text-center">
+                <div class="flex flex-col md:flex-row">
+                    <!-- hero left content -->
+                    <div class="hero-left flex-1 text-left content-center">
+                        <p class="text-lg font-mono">"Elegant web solutions, crafted for you."</p>
+                        <h1 class="mb-5 text-5xl font-bold">Hi, I’m Saiful.</h1>
+                        <p class="mb-5">I am front-end web developer and WordPress expert with Elementor.</p>
+                        <p class="mb-5">I specialize in WordPress and Elementor to create simple, user-friendly websites
+                            that work. Whether you need a custom design or a smooth experience, I’ll use these tools to
+                            bring your ideas to life.</p>
+                        <button class="btn px-8 rounded-full border-2 border-slate-900">Contact</button>
+                    </div>
+                    <!-- hero right amination -->
+                    <div class="hero-right text-right flex-1">
+                        <div id="animation_box"></div>
+                        <script>
+                            var animation = bodymovin.loadAnimation({
+                                container: document.getElementById('animation_box'),
+                                path: 'images/hero animition.json',
+                                renderer: 'svg',
+                                loop: true,
+                                autoplay: true,
+                                name: "Demo Animation",
+                            });   
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- portfolio section -->
+        <div class="py-8 sticky top-0 bg-slate-950 mx-auto">
+            <div class="bg-slate-950 w-full lg:w-4/5 mx-auto">
+                <div class="text-center py-6">
+                    <h2 class="text-6xl font-mono">PORTFOLIO</h2>
+                    <p class="mb-6">portfolio</p>
+                </div>
+                <div class="grid p-8 gap-4 grid-cols-1 md:grid-cols-3">
+                    
+                    <!-- card 01 -->
+                    <div>
+                        <div class="card rounded-lg bg-base-100 shadow-xl">
+                            <figure>
+                                <img class="h-60" src="images/wordpress portfolio 01.jpg" alt="Shoes" />
+                            </figure>
+                            <div class="card-body px-4 gap-5">
+                                <div class="flex flex-col lg:flex-row justify-between">
+                                    <h2 class="card-title font-mono text-3xl">WordPress
+                                        <div class="badge badge-primary badge-outline bg-slate-950 px-2 py-1 text-xs">NEW
+                                        </div>
+                                    </h2>
+                                    <div class="text-end">
+                                        <a class="kbd kbd-sm h-5" href="#" target="_blank">see live<span class="loading loading-ring loading-xs"></span></a>
+                                    </div>
+                                </div>
+                                <p>Webflow to WordPress conversion</p>
+                                <div class="card-actions justify-end">
+                                    <div class="badge badge-outline text-xs">Webflow</div>
+                                    <div class="badge badge-outline text-xs">WordPress</div>
+                                    <div class="badge badge-outline text-xs">Migration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 02 -->
+                    <div>
+                        <div class="card rounded-lg bg-base-100 shadow-xl">
+                            <figure>
+                                <img class="h-60" src="images/wordpress portfolio 02.jpg" alt="Shoes" />
+                            </figure>
+                            <div class="card-body gap-5">
+                                <div class="flex justify-between">
+                                    <h2 class="card-title font-mono text-3xl">WordPress
+                                        <div class="badge badge-primary badge-outline bg-slate-950 px-2 py-1 text-xs">NEW
+                                        </div>
+                                    </h2>
+                                    <a class="kbd kbd-sm h-5" href="#" target="_blank">see live<span class="loading loading-ring loading-xs"></span></a>
+                                </div>
+                                <p>Webflow to WordPress conversion</p>
+                                <div class="card-actions justify-end">
+                                    <div class="badge badge-outline text-xs">Webflow</div>
+                                    <div class="badge badge-outline text-xs">WordPress</div>
+                                    <div class="badge badge-outline text-xs">Migration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 03 -->
+                    <div>
+                        <div class="card rounded-lg bg-base-100 shadow-xl">
+                            <figure>
+                                <img class="h-60" src="images/wordpress portfolio 01.jpg" alt="Shoes" />
+                            </figure>
+                            <div class="card-body gap-5">
+                                <div class="flex justify-between">
+                                    <h2 class="card-title font-mono text-3xl">WordPress
+                                        <div class="badge badge-primary badge-outline bg-slate-950 px-2 py-1 text-xs">NEW
+                                        </div>
+                                    </h2>
+                                    <a class="kbd kbd-sm h-5" href="#" target="_blank">see live<span class="loading loading-ring loading-xs"></span></a>
+                                </div>
+                                <p>Webflow to WordPress conversion</p>
+                                <div class="card-actions justify-end">
+                                    <div class="badge badge-outline text-xs">Webflow</div>
+                                    <div class="badge badge-outline text-xs">WordPress</div>
+                                    <div class="badge badge-outline text-xs">Migration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- card 04 -->
+                    <div>
+                        <div class="card rounded-lg bg-base-100 shadow-xl">
+                            <figure>
+                                <img class="h-60" src="images/wordpress portfolio 01.jpg" alt="Shoes" />
+                            </figure>
+                            <div class="card-body gap-5">
+                                <div class="flex justify-between">
+                                    <h2 class="card-title font-mono text-3xl">WordPress
+                                        <div class="badge badge-primary badge-outline bg-slate-950 px-2 py-1 text-xs">NEW
+                                        </div>
+                                    </h2>
+                                    <a class="kbd kbd-sm h-5" href="#" target="_blank">see live<span class="loading loading-ring loading-xs"></span></a>
+                                </div>
+                                <p>Webflow to WordPress conversion</p>
+                                <div class="card-actions justify-end">
+                                    <div class="badge badge-outline text-xs">Webflow</div>
+                                    <div class="badge badge-outline text-xs">WordPress</div>
+                                    <div class="badge badge-outline text-xs">Migration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
