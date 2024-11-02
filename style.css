@@ -15,3 +15,13 @@
         transform: translate3d(-50%, 0, 0);
     }
 } 
+
+
+/*  */
+
+ .skill-input::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 0; 
+    height: 0;
+}
